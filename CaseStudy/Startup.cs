@@ -35,6 +35,16 @@ namespace CaseStudy
 
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+            // Adds a default in-memory implementation of IDistributedCache.
+            services.AddDistributedMemoryCache();
+            services.AddSession(options =>
+            {
+                // Set a short timeout for easy testing.
+                options.IdleTimeout = TimeSpan.FromSeconds(120); // 2 min session
+                options.Cookie.HttpOnly = true;
+                options.Cookie.IsEssential = true;
+            });
+
             services.AddDbContext<AppDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
         }
 
@@ -54,7 +64,7 @@ namespace CaseStudy
             app.UseHttpsRedirection();
             app.UseStaticFiles();
             app.UseCookiePolicy();
-
+            app.UseSession();
             app.UseMvc(routes =>
             {
                 routes.MapRoute(

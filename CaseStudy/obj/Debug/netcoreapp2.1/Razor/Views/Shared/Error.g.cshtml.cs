@@ -23,8 +23,13 @@ using CaseStudy.Models;
 
 #line default
 #line hidden
+#line 3 "C:\Users\Phuc-pc\source\repos\CaseStudy\CaseStudy\Views\_ViewImports.cshtml"
+using CaseStudy.Utils;
+
+#line default
+#line hidden
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"583387379a597938339285f5a623245873b0a91c", @"/Views/Shared/Error.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"85b17ec9f123a711f5075b6cb9ac171bbadeab64", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"4f85ca7dce6104257ec02c4ebccf6c44f58dbce1", @"/Views/_ViewImports.cshtml")]
     public class Views_Shared_Error : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<ErrorViewModel>
     {
         #pragma warning disable 1998

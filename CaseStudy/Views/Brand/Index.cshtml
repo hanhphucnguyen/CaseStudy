@@ -2,12 +2,37 @@
 @{
     ViewData["Title"] = "Index";
 }
-<div class="text-center">
-    <h4>Brand</h4>
-    <br />
-    <form asp-controller="Product" asp-action="Index" method="post">
-        <select asp-for="Id" asp-items="@Model.GetBrands()" class="form-group form-control" onchange="this.form.submit();">
-            <option selected style="display:none;">Select Brand</option>
-        </select>
-    </form>
+<div class="flex-container">
+    <div class="w-100">
+        <h4 style="text-align:center">Brands</h4>
+        <br />
+        <form asp-controller="Brand" asp-action="Index" method="post">
+            <select asp-for="Id" asp-items="@Model.GetBrands()"
+                    class="form-group form-control" onchange="this.form.submit();">
+                <option selected style="display:none;">Select Category</option>
+            </select>
+        </form>
+        @if (Model.Products != null && Model.Products.Count() > 0)
+        {
+            <h5 class="mt-2">Items</h5>
+            <div class="row w-100 m-1" style="overflow-y:scroll;height:60vh;">
+                @foreach (Product item in Model.Products)
+                {
+                    <div id="item" class="col-sm-3 col-xs-12 text-center" style="border:solid;">
+                        <img class="mt-2" src="~/images/burger.jpg" /><br />
+                        @if (item.Description.Length > 25)
+                        {
+                            <span class="m-0" style="font-size:large;font-weight:bold;">@item.Description.Substring(0, 25)...</span>
+                        }
+                        else
+                        {
+                            <span style="font-size:large;font-weight:bold;">@item.Description</span>
+                        }
+                        <p><span style="font-size:medium">Laptop info. in details</span><p>
+                            <a id="" class="btn btn-outline-dark pt-2 pb-2">Details</a>
+                    </div>
+                }
+            </div>
+        }
+    </div>
 </div>
