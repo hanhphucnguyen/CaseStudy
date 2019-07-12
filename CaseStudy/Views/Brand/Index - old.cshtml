@@ -1,0 +1,38 @@
+﻿@model BrandViewModel
+@{
+    ViewData["Title"] = "Index";
+}
+<div class="flex-container">
+    <div class="w-100">
+        <div class="text-center">
+            <img src="~/images/store.png" style="height:55px;width:75px;" class="mb-2" />
+            <h4 class="text-primary text-center mt-5">Brands</h4>
+            <form asp-controller="Brand" asp-action="Index" method="post">
+                <select asp-for="Id" asp-items="@Model.GetBrands()"
+                        class="form-group form-control" onchange="this.form.submit();">
+                    <option selected style="display:none;">Select Brand</option>
+                </select>
+            </form>
+        </div>
+        @if (Model.Products != null && Model.Products.Count() > 0)
+        {
+           
+        <h6 class="text-primary mt-5">Available Laptops</h6>
+        <div class="row w-100 m-1" style="overflow-y:scroll;height:60vh;">
+            @foreach (Product item in Model.Products)
+                {            
+
+            <div id="item" class="col-sm-3 col-xs-12 text-center m-1" style="border:solid;">
+                <img class="mt-2" src="~/images/@item.GraphicName" style="height:140px;width:200px;" /><br />
+                <span style="font-size:medium;font-weight:bold;">@item.Description.Substring(0, 25)...</span>
+                <p></p>
+                <p><span style="font-size:small">More info. in details</span><p>
+                <p></p>
+                <a id="" class="btn btn-outline-dark pt-2 pb-2">Details</a>
+                <p></p>
+            </div>
+                }
+        </div>
+        }
+    </div>
+</div>

@@ -32,3 +32,5 @@ C:\Users\Phuc-pc\source\repos\CaseStudy\CaseStudy\obj\Debug\netcoreapp2.1\CaseSt
 C:\Users\Phuc-pc\source\repos\CaseStudy\CaseStudy\obj\Debug\netcoreapp2.1\Razor\Views\Data\Index.g.cshtml.cs
 C:\Users\Phuc-pc\source\repos\CaseStudy\CaseStudy\obj\Debug\netcoreapp2.1\Razor\Views\Brand\Index.g.cshtml.cs
 C:\Users\Phuc-pc\source\repos\CaseStudy\CaseStudy\obj\Debug\netcoreapp2.1\Razor\Views\Product\Index.g.cshtml.cs
+C:\Users\Phuc-pc\source\repos\CaseStudy\CaseStudy\obj\Debug\netcoreapp2.1\CaseStudy.csprojAssemblyReference.cache
+C:\Users\Phuc-pc\source\repos\CaseStudy\CaseStudy\obj\Debug\netcoreapp2.1\Razor\Views\Brand\Index - old.g.cshtml.cs

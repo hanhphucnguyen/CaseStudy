@@ -9,6 +9,8 @@ namespace CaseStudy.Models
         public BrandViewModel() { }
         public string BrandName { get; set; }
         public int Id { get; set; }
+        public int BrandId { get; set; }
+        public int Qty { get; set; }
         public IEnumerable<Product> Products { get; set; }
         public IEnumerable<SelectListItem> GetBrands()
         {

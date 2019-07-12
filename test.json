@@ -1,0 +1,112 @@
+[
+{
+    PRO: "Macbook Pro 2015",
+    GRA: "macbook2015.jpg",
+    COS: "2500",
+    MSRP: "250",
+    QH: "51",
+    QB: "4",    
+    ITEM: "The MacBook Pro continues to be one of the most seamless-looking notebooks in its category, with two subtle stereo speakers flanking the laptop's signature black chiclet keyboard. The MacBook's underside sports a set of barely noticeable vents on either side, with the iconic glowing Apple logo adorning the lid.",
+    BRAND: "APPLE"
+},
+{
+    PRO: "Macbook Pro 2016",
+    GRA: "macbook2016.jpg",
+    COS: "3000",
+    MSRP: "300",
+    QH: "41",
+    QB: "5",
+    ITEM: "There's lots to like about the new MacBook Pro: its slimmed-down design, brighter screen, improved audio, faster graphics and disk speeds. But by doing things like removing full-sized USB ports, the memory card reader and even the Function row, Apple seems to forgotten how many of us actually work. An even better MacBook Pro would be one that doesn't require users to make drastic changes to their workflow.",
+    BRAND: "APPLE"
+},
+{
+    PRO: "Macbook Pro 2017",
+    GRA: "macbook2017.jpg",
+    COS: "3000",
+    MSRP: "300",
+    QH: "71",
+    QB: "3",
+    ITEM: "If you bought a new MacBook Pro last October you might be a tiny bit miffed. After all, your machine has just been surpassed within months. Does it really matter though? Probably not because chances are you aren’t a creative professional who needs the best processor and graphics card as well as a ton of RAM. And if you are, we’ll maybe you are holding out for the hoped for MacBook Pro with 32GB RAM. ",
+    BRAND: "APPLE"
+},
+{
+    PRO: "Macbook Pro 2018",
+    GRA: "macbook2018.jpg",
+    COS: "3000",
+    MSRP: "300",
+    QH: "17",
+    QB: "5",
+    ITEM: "The new 2018 MacBook Pros attempt to atone for some of the line's recent performance missteps by throwing powerful new processors, tweaked graphics cards, a massaged keyboard, more RAM, and bigger SSDs into a product meant for the professionals who consistently rely on these machines. But over the past week that I’ve been using the new, 15-inch MacBook Pro running on a top-of-the-line Intel processor, I’ve found that what Apple's offering has a surprising number of caveats—its eye-watering price tag among them—you’ll have to consider.",
+    BRAND: "APPLE"
+},
+{
+    PRO: "Macbook Pro 2019",
+    GRA: "macbook2019.jpg",
+    COS: "3000",
+    MSRP: "300",
+    QH: "20",
+    QB: "9",
+    ITEM: "What does Apple have planned for the MacBook Pro in 2019? This year's model added some major features, such as blazing-fast processors, True Tone display technology and a quieter keyboard, which checked off plenty of items on our wish list and made for one of the best Apple laptops yet.",
+    BRAND: "APPLE"
+},
+{
+    PRO: "product name 1 brand Lenovo",
+    GRA: "gralenovo1",
+    COS: "125.0",
+    MSRP: "1480.0",
+    QH: "51",
+    QB: "4",
+    ITEM: "Description 1",
+    BRAND: "LENOVO"
+},
+{
+    PRO: "product name 2 brand Lenovo",
+    GRA: "gralenovo2",
+    COS: "125.0",
+    MSRP: "1480.0",
+    QH: "51",
+    QB: "4",
+    ITEM: "Description 2",
+    BRAND: "LENOVO"
+},
+{
+    PRO: "product name 3 brand Lenovo",
+    GRA: "gralenovo3",
+    COS: "125.0",
+    MSRP: "1480.0",
+    QH: "51",
+    QB: "4",
+    ITEM: "Description 3",
+    BRAND: "LENOVO"
+},
+{
+    PRO: "product name 1 brand HP",
+    GRA: "grahp1",
+    COS: "125.0",
+    MSRP: "1480.0",
+    QH: "51",
+    QB: "4",
+    ITEM: "Description 1",
+    BRAND: "HP"
+},
+{
+    PRO: "product name 2 brand HP",
+    GRA: "grahp2",
+    COS: "125.0",
+    MSRP: "1480.0",
+    QH: "51",
+    QB: "4",
+    ITEM: "Description 2",
+    BRAND: "HP"
+},
+{
+    PRO: "product name 3 brand HP",
+    GRA: "grahp3",
+    COS: "125.0",
+    MSRP: "1480.0",
+    QH: "51",
+    QB: "4",
+    ITEM: "Description 3",
+    BRAND: "HP"
+}
+]
