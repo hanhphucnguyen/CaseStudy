@@ -1,0 +1,71 @@
+﻿@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="card">
+    <div class="card-title text-center mt-5">
+        <h3 class="font-weight-bold">Cart Contents</h3>
+        <img src="/images/cart.png" style="height:10%;width:10%;padding-bottom:5%;" />
+    </div>
+    <div class="text-center">
+        @{
+            Dictionary<int, object> cart = Context.Session.Get<Dictionary<int, Object>>("cart");
+            float priceTot = 0.0f;
+            float taxTot = 0.0f;
+            float priceFinal = 0.0f;
+        }
+        <table class="table table-striped">
+            <tr style="font-weight:bolder;">
+                <th class="text-center">Qty</th>
+                <th class="text-center">Product Name</th>
+                <th class="text-left">Description</th>
+            </tr>
+            @{
+                if (cart != null)
+                {
+                    foreach (var key in cart.Keys)
+                    {
+                        MenuProductViewModel item = JsonConvert.DeserializeObject
+                        <MenuProductViewModel>
+                        (Convert.ToString(cart[key]));
+                        if (item.Qty > 0)
+                        {
+                            priceTot += item.COS * item.Qty;
+                            taxTot = priceTot * 0.13f;
+                            priceFinal = taxTot + priceTot;
+                        <tr>
+                            <td class="text-center">@item.Qty</td>
+                            <td class="text-center">@item.PRO</td>
+                            <td class="text-left">@item.Description</td>
+                        </tr>
+                        }
+                    }
+                }
+            }
+        </table>
+        <hr />
+        <table class="table table-striped">
+            <tr>
+                <th colspan="4" class="text-left" style="font-size:large;font-weight:bold;">
+                    Cart
+                    Totals
+                </th>
+            </tr>
+            <tr>
+                <td class="text-right font-weight-bold">Price:$</td>
+                <td class="text-left" id="cal">@priceTot</td>
+            </tr>
+            <tr>
+                <td class="text-right font-weight-bold">Tax:$</td>
+                <td class="text-left" id="cal">@taxTot</td>
+            </tr>
+            <tr>
+                <td class="text-right font-weight-bold">Total:$</td>
+                <td class="text-left" id="cal">@priceFinal</td>
+            </tr>
+        </table>
+        <div class="text-center mb-3">
+            &nbsp;<a href="/Cart/ClearCart" class="btn btn-sm btn-success">Clear Cart</a>
+        </div>
+    </div>
+</div>

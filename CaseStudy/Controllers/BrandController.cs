@@ -73,13 +73,13 @@ namespace CaseStudy.Controllers
         public ActionResult SelectItem(BrandViewModel vm)
         {
             Dictionary<int, object> tray;
-            if (HttpContext.Session.Get<Dictionary<int, Object>>("tray") == null)
+            if (HttpContext.Session.Get<Dictionary<int, Object>>("cart") == null)
             {
                 tray = new Dictionary<int, object>();
             }
             else
             {
-                tray = HttpContext.Session.Get<Dictionary<int, object>>("tray");
+                tray = HttpContext.Session.Get<Dictionary<int, object>>("cart");
             }
             MenuProductViewModel[] menu = HttpContext.Session.Get<MenuProductViewModel[]>("menu");
             String retMsg = "";
@@ -104,7 +104,7 @@ namespace CaseStudy.Controllers
                 }
             }
             ViewBag.AddMessage = retMsg;
-            HttpContext.Session.Set<Dictionary<int, Object>>("tray", tray);
+            HttpContext.Session.Set<Dictionary<int, Object>>("cart", tray);
             vm.SetBrands(HttpContext.Session.Get<List<Brand>>("brands"));
             return View("Index", vm);
         }

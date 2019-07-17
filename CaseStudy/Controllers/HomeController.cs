@@ -5,6 +5,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using CaseStudy.Models;
+using Microsoft.AspNetCore.Http;
 
 namespace CaseStudy.Controllers
 {
@@ -12,6 +13,7 @@ namespace CaseStudy.Controllers
     {
         public IActionResult Index()
         {
+            ViewBag.Message = HttpContext.Session.GetString("message");
             return View();
         }
     }

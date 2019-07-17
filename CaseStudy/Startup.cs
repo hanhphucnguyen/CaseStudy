@@ -11,6 +11,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.EntityFrameworkCore;
 using CaseStudy.Models;
+using Microsoft.Extensions.DependencyInjection.Extensions;
 
 namespace CaseStudy
 {
@@ -33,7 +34,8 @@ namespace CaseStudy
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
 
-
+            // Added for TagHelper
+            services.TryAddSingleton<IHttpContextAccessor, HttpContextAccessor>();
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
             // Adds a default in-memory implementation of IDistributedCache.
             services.AddDistributedMemoryCache();

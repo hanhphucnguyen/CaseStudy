@@ -13,8 +13,38 @@
                     <option selected style="display:none;">Select Brand</option>
                 </select>
             </form>
-            <catalogue brand="@Model.BrandId"></catalogue>
-        </div>  
+        </div>
+        @if (Context.Session.Get<MenuProductViewModel[]>("menu") != null && Model.BrandId > 0)
+        {
+            MenuProductViewModel[] menu = Context.Session.Get<MenuProductViewModel[]>("menu");
+            <h6 class="text-primary mt-5">Available Laptops</h6>
+            <div class="row w-100 m-1" style="overflow-y:scroll;height:60vh;">
+                @foreach (MenuProductViewModel item in menu)
+                {
+                    // remove double apostrophe
+                    item.Description = item.Description.Contains("''") ?
+                    item.Description.Replace("''", "") : item.Description;
+                    var itemjson = JsonConvert.SerializeObject(item);
+                    var btn = "catbtn" + item.Id;
+
+                    <div id="item" class="col-sm-3 col-xs-12 text-center m-1" style="border:solid;">
+                        <img class="mt-2" src="~/images/@item.GRA" style="height:140px;width:200px;" /><br />
+                        @if (item.Description.Length > 25)
+                        {
+                            <span class="m-0" style="font-size:large;font-weight:bold;">@item.Description.Substring(0, 25)...</span>
+                        }
+                        else
+                        {
+                            <span style="font-size:large;font-weight:bold;">@item.Description</span>
+                        }
+                        <p>
+                            <span style="font-size:medium">Laptop info. in details</span>
+                        <p>
+                            <a id="@btn" href="#details_popup" data-toggle="modal" class="btn btn-outline-dark pt-2 pb-2" data-id="@item.Id" data-details="@itemjson">Details</a>
+                    </div>
+                }
+            </div>
+        }
     </div>
 </div>
 <div class="modal" id="details_popup">
@@ -45,8 +75,6 @@
                         <button type="submit" class="btn btn-outline-dark">
                             Add To Cart
                         </button>
-                        <button id="btnRemove" type="submit" class="btn btn-outline-danger">Remove Item</button>
-                        <a href="/Cart" class="btn btn-outline-success">View Cart</a>
                     </div>
                 </form>
             </div>

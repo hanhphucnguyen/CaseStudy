@@ -11,6 +11,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Content Update="Views\Brand\Index - Copy.cshtml">
+      <Pack>$(IncludeRazorContentInPack)</Pack>
+    </Content>
     <Content Update="Views\Brand\Index - old.cshtml">
       <Pack>$(IncludeRazorContentInPack)</Pack>
     </Content>
