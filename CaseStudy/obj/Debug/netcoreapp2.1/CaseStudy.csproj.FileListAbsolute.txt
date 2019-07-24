@@ -36,3 +36,5 @@ C:\Users\Phuc-pc\source\repos\CaseStudy\CaseStudy\obj\Debug\netcoreapp2.1\CaseSt
 C:\Users\Phuc-pc\source\repos\CaseStudy\CaseStudy\obj\Debug\netcoreapp2.1\Razor\Views\Brand\Index - old.g.cshtml.cs
 C:\Users\Phuc-pc\source\repos\CaseStudy\CaseStudy\obj\Debug\netcoreapp2.1\Razor\Views\Brand\Index - Copy.g.cshtml.cs
 C:\Users\Phuc-pc\source\repos\CaseStudy\CaseStudy\obj\Debug\netcoreapp2.1\Razor\Views\Cart\Index.g.cshtml.cs
+C:\Users\Phuc-pc\source\repos\CaseStudy\CaseStudy\obj\Debug\netcoreapp2.1\Razor\Views\Register\Index.g.cshtml.cs
+C:\Users\Phuc-pc\source\repos\CaseStudy\CaseStudy\obj\Debug\netcoreapp2.1\Razor\Views\Login\Index.g.cshtml.cs
