@@ -56,7 +56,7 @@
 // populate the modal fields
 const CopyToModal = (id, data) => {
     $("#qty").val("0");
-    $("#cost").text(data.COS);
+    $("#cost").text(data.MSRP);
     $("#description").text(data.Description);
     let image = data.GRA;
     $("#detailsGraphic").attr("src", `/images/${image}`);

@@ -33,7 +33,7 @@ namespace CaseStudy.Controllers
         }
         private async Task<String> getMenuItemJsonFromWebAsync()
         {
-            string url = "https://raw.githubusercontent.com/leonguyenontario/CaseStudy/master/test.json?token=ALVUAYCLWKVPVDMICOQVDCS5HEHC4";
+            string url = "https://raw.githubusercontent.com/leonguyenontario/CaseStudy/master/test.json?token=ALVUAYANZCUR5ZPU5ESTQ4S5HEJBQ";
             var httpClient = new HttpClient();
             var response = await httpClient.GetAsync(url);
             var result = await response.Content.ReadAsStringAsync();

@@ -30,7 +30,7 @@
                         (Convert.ToString(cart[key]));
                         if (item.Qty > 0)
                         {
-                            priceTot += item.COS * item.Qty;
+                            priceTot += item.MSRP * item.Qty;
                             taxTot = priceTot * 0.13f;
                             priceFinal = taxTot + priceTot;
                         <tr>
@@ -65,7 +65,13 @@
             </tr>
         </table>
         <div class="text-center mb-3">
-            &nbsp;<a href="/Cart/ClearCart" class="btn btn-sm btn-success">Clear Cart</a>
+            <form asp-controller="Cart" asp-action="AddCart" method="post" role="form">
+                @if (Context.Session.Get(SessionVariables.User) != null)
+                {
+                    <button type="submit" class="btn btn-sm btn-primary" id="modalbtn">Add Cart</button>
+                }
+                &nbsp;<a href="/Cart/ClearCart" class="btn btn-sm btn-success">Clear Cart</a>
+            </form>           
         </div>
     </div>
 </div>
