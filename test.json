@@ -61,7 +61,7 @@
 },
 {
     PRO: "ThinkPad X1 Yoga",
-    GRA: "thinkpadx1yoga.jpg",
+    GRA: "tpx1yoga.jpg",
     COS: "125.0",
     MSRP: "1480.0",
     QH: "51",
@@ -76,7 +76,7 @@
     MSRP: "1480.0",
     QH: "51",
     QB: "4",
-    ITEM: "Description 3",
+    ITEM: "Boasting with the latest power-packed processors and all-day battery life.",
     BRAND: "LENOVO"
 },
 {
@@ -91,7 +91,7 @@
 },
 {
     PRO: "Lenovo Legion Y540",
-    GRA: "lenovolegiony540.jpg",
+    GRA: "legiony540.jpg",
     COS: "125.0",
     MSRP: "1480.0",
     QH: "51",
@@ -101,27 +101,27 @@
 },
 {
     PRO: "HP EliteBook 840",
-    GRA: "hpelitebook840.jpg",
+    GRA: "elitebook840.jpg",
     COS: "125.0",
     MSRP: "1480.0",
     QH: "51",
     QB: "4",
-    ITEM: "This HP ELITE BOOK 840 G1 combines portability, performance and value. Featuring a 4th generation Intel i5 4300u 1.9 GHz ...",
+    ITEM: "This HP ELITE BOOK 840 G1 combines portability, performance and value. Featuring a 4th generation Intel i5 4300u 1.9 GHz .",
     BRAND: "HP"
 },
 {
     PRO: "HP EliteBook 850 G5 Notebook PC",
-    GRA: "hpelitebook850.jpg",
+    GRA: "elitebook850.jpg",
     COS: "125.0",
     MSRP: "1480.0",
     QH: "51",
     QB: "4",
-    ITEM: "A distinctively designed notebook that lets you work anywhere. Beautifully crafted with the modern professional in mind, the ...",
+    ITEM: "A distinctively designed notebook that lets you work anywhere. Beautifully crafted with the modern professional in mind.",
     BRAND: "HP"
 },
 {
     PRO: "HP Chromebook 14",
-    GRA: "hpchromebook14.jpg",
+    GRA: "chromebook14.jpg",
     COS: "125.0",
     MSRP: "1480.0",
     QH: "51",

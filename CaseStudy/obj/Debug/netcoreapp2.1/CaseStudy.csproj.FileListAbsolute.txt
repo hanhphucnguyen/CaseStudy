@@ -13,10 +13,18 @@ C:\Users\Phuc-pc\source\repos\CaseStudy\CaseStudy\obj\Debug\netcoreapp2.1\CaseSt
 C:\Users\Phuc-pc\source\repos\CaseStudy\CaseStudy\obj\Debug\netcoreapp2.1\CaseStudy.TagHelpers.input.cache
 C:\Users\Phuc-pc\source\repos\CaseStudy\CaseStudy\obj\Debug\netcoreapp2.1\CaseStudy.TagHelpers.output.cache
 C:\Users\Phuc-pc\source\repos\CaseStudy\CaseStudy\obj\Debug\netcoreapp2.1\CaseStudy.RazorCoreGenerate.cache
+C:\Users\Phuc-pc\source\repos\CaseStudy\CaseStudy\obj\Debug\netcoreapp2.1\Razor\Views\Brand\Index - Copy.g.cshtml.cs
+C:\Users\Phuc-pc\source\repos\CaseStudy\CaseStudy\obj\Debug\netcoreapp2.1\Razor\Views\Brand\Index - old.g.cshtml.cs
+C:\Users\Phuc-pc\source\repos\CaseStudy\CaseStudy\obj\Debug\netcoreapp2.1\Razor\Views\Brand\Index.g.cshtml.cs
+C:\Users\Phuc-pc\source\repos\CaseStudy\CaseStudy\obj\Debug\netcoreapp2.1\Razor\Views\Cart\Index.g.cshtml.cs
+C:\Users\Phuc-pc\source\repos\CaseStudy\CaseStudy\obj\Debug\netcoreapp2.1\Razor\Views\Data\Index.g.cshtml.cs
 C:\Users\Phuc-pc\source\repos\CaseStudy\CaseStudy\obj\Debug\netcoreapp2.1\Razor\Views\Home\About.g.cshtml.cs
 C:\Users\Phuc-pc\source\repos\CaseStudy\CaseStudy\obj\Debug\netcoreapp2.1\Razor\Views\Home\Contact.g.cshtml.cs
 C:\Users\Phuc-pc\source\repos\CaseStudy\CaseStudy\obj\Debug\netcoreapp2.1\Razor\Views\Home\Index.g.cshtml.cs
 C:\Users\Phuc-pc\source\repos\CaseStudy\CaseStudy\obj\Debug\netcoreapp2.1\Razor\Views\Home\Privacy.g.cshtml.cs
+C:\Users\Phuc-pc\source\repos\CaseStudy\CaseStudy\obj\Debug\netcoreapp2.1\Razor\Views\Login\Index.g.cshtml.cs
+C:\Users\Phuc-pc\source\repos\CaseStudy\CaseStudy\obj\Debug\netcoreapp2.1\Razor\Views\Product\Index.g.cshtml.cs
+C:\Users\Phuc-pc\source\repos\CaseStudy\CaseStudy\obj\Debug\netcoreapp2.1\Razor\Views\Register\Index.g.cshtml.cs
 C:\Users\Phuc-pc\source\repos\CaseStudy\CaseStudy\obj\Debug\netcoreapp2.1\Razor\Views\Shared\Error.g.cshtml.cs
 C:\Users\Phuc-pc\source\repos\CaseStudy\CaseStudy\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_CookieConsentPartial.g.cshtml.cs
 C:\Users\Phuc-pc\source\repos\CaseStudy\CaseStudy\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_Layout.g.cshtml.cs
@@ -29,12 +37,3 @@ C:\Users\Phuc-pc\source\repos\CaseStudy\CaseStudy\obj\Debug\netcoreapp2.1\CaseSt
 C:\Users\Phuc-pc\source\repos\CaseStudy\CaseStudy\obj\Debug\netcoreapp2.1\CaseStudy.dll
 C:\Users\Phuc-pc\source\repos\CaseStudy\CaseStudy\obj\Debug\netcoreapp2.1\CaseStudy.pdb
 C:\Users\Phuc-pc\source\repos\CaseStudy\CaseStudy\obj\Debug\netcoreapp2.1\CaseStudy.csproj.CopyComplete
-C:\Users\Phuc-pc\source\repos\CaseStudy\CaseStudy\obj\Debug\netcoreapp2.1\Razor\Views\Data\Index.g.cshtml.cs
-C:\Users\Phuc-pc\source\repos\CaseStudy\CaseStudy\obj\Debug\netcoreapp2.1\Razor\Views\Brand\Index.g.cshtml.cs
-C:\Users\Phuc-pc\source\repos\CaseStudy\CaseStudy\obj\Debug\netcoreapp2.1\Razor\Views\Product\Index.g.cshtml.cs
-C:\Users\Phuc-pc\source\repos\CaseStudy\CaseStudy\obj\Debug\netcoreapp2.1\CaseStudy.csprojAssemblyReference.cache
-C:\Users\Phuc-pc\source\repos\CaseStudy\CaseStudy\obj\Debug\netcoreapp2.1\Razor\Views\Brand\Index - old.g.cshtml.cs
-C:\Users\Phuc-pc\source\repos\CaseStudy\CaseStudy\obj\Debug\netcoreapp2.1\Razor\Views\Brand\Index - Copy.g.cshtml.cs
-C:\Users\Phuc-pc\source\repos\CaseStudy\CaseStudy\obj\Debug\netcoreapp2.1\Razor\Views\Cart\Index.g.cshtml.cs
-C:\Users\Phuc-pc\source\repos\CaseStudy\CaseStudy\obj\Debug\netcoreapp2.1\Razor\Views\Register\Index.g.cshtml.cs
-C:\Users\Phuc-pc\source\repos\CaseStudy\CaseStudy\obj\Debug\netcoreapp2.1\Razor\Views\Login\Index.g.cshtml.cs
