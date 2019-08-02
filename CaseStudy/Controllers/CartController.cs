@@ -51,5 +51,30 @@ namespace CaseStudy.Controllers
             HttpContext.Session.SetString(SessionVariables.Message, retMessage);
             return Redirect("/Home");
         }
+
+        [Route("[action]")]
+        public IActionResult GetCarts()
+        {
+            OrderModel model = new OrderModel(_db);
+            ApplicationUser user = HttpContext.Session.Get<ApplicationUser>(SessionVariables.User);
+            return Ok(model.GetAll(user));
+        }
+        public IActionResult List()
+        {
+            // they can't list Trays if they're not logged on
+            if (HttpContext.Session.Get<ApplicationUser>(SessionVariables.User) == null)
+            {
+                return Redirect("/Login");
+            }
+            return View("List");
+        }
+
+        [Route("[action]/{tid:int}")]
+        public IActionResult GetOrderDetails(int tid)
+        {
+            OrderModel model = new OrderModel(_db);
+            ApplicationUser user = HttpContext.Session.Get<ApplicationUser>(SessionVariables.User);
+            return Ok(model.GetOrderDetails(tid, user.Id));
+        }
     }
 }

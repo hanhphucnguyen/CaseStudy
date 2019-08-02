@@ -1,6 +1,7 @@
 ﻿using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace CaseStudy.Models
 {
@@ -80,6 +81,34 @@ namespace CaseStudy.Models
                 }
             }
             return cartId;
+        }
+
+        public List<Order> GetAll(ApplicationUser user)
+        {
+            return _db.Orders.Where(cart => cart.UserId == user.Id).ToList<Order>();
+        }
+
+        public List<OrderViewModel> GetOrderDetails(int tid, string uid)
+        {
+            List<OrderViewModel> allDetails = new List<OrderViewModel>();
+            // LINQ way of doing INNER JOINS
+            var results = from t in _db.Set<Order>()
+                          join ti in _db.Set<OrderLineItem>() on t.Id equals ti.OrderId
+                          join mi in _db.Set<Product>() on ti.ProductId equals mi.Id
+                          where (t.UserId == uid && t.Id == tid)
+                          select new OrderViewModel
+                          {
+                              Description = mi.Description,
+                              Qty = ti.QtyOrdered,
+                              QtyO = mi.QtyOnHand,
+                              QtyB = mi.QtyOnBackOrder,
+                              DateCreated = t.OrderDate.ToString("yyyy/MM/dd - hh:mm tt"),
+                              Name = mi.ProductName,
+                              MSRP =Convert.ToDecimal(mi.MSRP),
+                              OrderAmount = t.OrderAmount
+                          };
+            allDetails = results.ToList<OrderViewModel>();
+            return allDetails;
         }
     }
 }
