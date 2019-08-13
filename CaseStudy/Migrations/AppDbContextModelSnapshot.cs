@@ -147,8 +147,6 @@ namespace CaseStudy.Migrations
 
                     b.HasIndex("OrderId");
 
-                    b.HasIndex("ProductId");
-
                     b.ToTable("OrderLineItems");
                 });
 
@@ -305,11 +303,6 @@ namespace CaseStudy.Migrations
                     b.HasOne("CaseStudy.Models.Order", "Order")
                         .WithMany("OrderLineItems")
                         .HasForeignKey("OrderId")
-                        .OnDelete(DeleteBehavior.Cascade);
-
-                    b.HasOne("CaseStudy.Models.Product", "Product")
-                        .WithMany()
-                        .HasForeignKey("ProductId")
                         .OnDelete(DeleteBehavior.Cascade);
                 });
 
