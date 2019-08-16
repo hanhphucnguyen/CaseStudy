@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Identity;
 using CaseStudy.Models;
 using Microsoft.AspNetCore.Http;
 using CaseStudy.Controllers;
+using Microsoft.AspNetCore.Authorization;
 
 namespace CaseStudy.Controllers
 {
@@ -18,6 +19,7 @@ namespace CaseStudy.Controllers
             _signInMgr = signInManager;
             _usrMgr = userManager;
         }
+        [AllowAnonymous]
         public ActionResult Index(string ReturnUrl = null)
         {
             if (HttpContext.Session.Get(SessionVariables.LoginStatus) == null)
@@ -36,6 +38,7 @@ namespace CaseStudy.Controllers
         //
         // POST: /Account/Login
         //
+        [AllowAnonymous]
         [HttpPost]
         public async Task<IActionResult> Login(LoginViewModel model, string returnUrl = null)
         {

@@ -7,18 +7,47 @@ Vue.component("storemodal", {
         lng: ''
     },
     methods: {
-        async showModal() {
+        async showModal(lat, lng) {
             try {
-                let response = await fetch(`/GetStores(${lat},${lng})`);
+                let response = await fetch(`/GetStores/${this.lat}/${this.lng}`);
                 if (!response.ok) // or check for response.status
                     throw new Error(`Status - ${response.status}, Text - ${response.statusText}`);
                 let data = await response.json(); // this returns a promise, so we await it
                 this.details = data;
+                let myLatLng = new google.maps.LatLng(this.lat, this.lng);
+                let map_canvas = document.getElementById("map");
+                let options = {
+                    zoom: 10, center: myLatLng, mapTypeId:
+                        google.maps.MapTypeId.ROADMAP
+                };
+                let map = new google.maps.Map(map_canvas, options);
+                let center = map.getCenter();
+                map.setCenter(center);
+                google.maps.event.trigger(map, "resize");
+                let infowindow = new google.maps.InfoWindow({ content: "" });
+                let idx = 0;
+                this.details.map((detail) => {
+                    idx = idx + 1;
+                    let marker = new google.maps.Marker({
+                        position: new google.maps.LatLng(detail.latitude, detail.longitude),
+                        map: map,
+                        animation: google.maps.Animation.DROP,
+                        icon: `../images/marker${idx}.png`,
+                        title: `Store#${detail.id} ${detail.street}, ${detail.city},${detail.region}`,
+                        html: `<div>Store#${detail.id}<br/>${detail.street}, ${detail.city}<br/>${detail.distance.toFixed(2)} km</div>`
+                    });
+                    google.maps.event.addListener(marker, "click", () => {
+                        infowindow.setContent(marker.html); // added .html to the marker object.
+                        infowindow.close();
+                        infowindow.open(map, marker);
+                    });
+                });
             } catch (error) {
                 console.log(error.statusText);
             }
         }
-    }
+    },
+    mounted() { this.showModal(); },
 });
 const stores = new Vue({
     el: '#stores',
@@ -33,58 +62,6 @@ const stores = new Vue({
                         this.lat = results[0].geometry.location.lat();
                         this.lng = results[0].geometry.location.lng();
                         this.showModal = true;
-                        let myLatLng = new google.maps.LatLng(this.lat, this.lng);
-                        let map_canvas = document.getElementById("map");
-                        //let map_canvas = this.$refs["myid"];
-                        let options = {
-                            zoom: 10, center: myLatLng, mapTypeId:
-                                google.maps.MapTypeId.ROADMAP
-                        };
-                        let map = new google.maps.Map(map_canvas, options);
-                        let center = map.getCenter();
-                        map.setCenter(center);
-                        google.maps.event.trigger(map, "resize");
-                        infowindow = new google.maps.InfoWindow({ content: "" });
-                        //add the markers, event handlers, infowindows for each location
-                        marker = new google.maps.Marker({
-                            position: new google.maps.LatLng(this.lat, this.lng),
-                            map: map,
-                            animation: google.maps.Animation.DROP,
-                            icon: `../images/marker1.png`,
-                            title: `Some hover info goes here`,
-                            html: `<div>1149 Highbury Ave <br/> London , ON <br/> 0.3 km </div>`                 
-                        });         
-                        google.maps.event.addListener(marker, "click", () => {
-                            infowindow.setContent(marker.html);
-                            infowindow.close();
-                            infowindow.open(map, marker);
-                        });      
-                        marker2 = new google.maps.Marker({                       
-                            position: new google.maps.LatLng(43.014802, - 81.212926),
-                            map: map,
-                            animation: google.maps.Animation.DROP,
-                            icon: `../images/marker2.png`,
-                            title: `Some hover info goes here`,
-                            html: `<div> 1181 Highbury Ave N <br/> London , ON <br/> 0.35 mi </div>`
-                        });
-                        google.maps.event.addListener(marker2, "click", () => {
-                            infowindow.setContent(marker2.html);
-                            infowindow.close();
-                            infowindow.open(map, marker2);
-                        });  
-                        marker3 = new google.maps.Marker({       
-                            position: new google.maps.LatLng(42.984459, -81.289962),
-                            map: map,
-                            animation: google.maps.Animation.DROP,
-                            icon: `../images/marker3.png`,
-                            title: `Some hover info goes here`,
-                            html: `<div>Store#103 <br/> Fanshawe Park Road East, London <br/> 0.2 mi </div>`
-                        });
-                        google.maps.event.addListener(marker3, "click", () => {
-                            infowindow.setContent(marker3.html);
-                            infowindow.close();
-                            infowindow.open(map, marker3);
-                        });                       
                     }
                 });
             } catch (error) {
@@ -93,7 +70,7 @@ const stores = new Vue({
         }
     },
     data: {
-        details: [],
+        address: '',
         lat: '',
         lng: '',
         showModal: false

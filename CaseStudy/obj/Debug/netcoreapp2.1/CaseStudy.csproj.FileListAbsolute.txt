@@ -39,3 +39,4 @@ C:\Users\Phuc-pc\source\repos\CaseStudy\CaseStudy\obj\Debug\netcoreapp2.1\CaseSt
 C:\Users\Phuc-pc\source\repos\CaseStudy\CaseStudy\obj\Debug\netcoreapp2.1\CaseStudy.csproj.CopyComplete
 C:\Users\Phuc-pc\source\repos\CaseStudy\CaseStudy\obj\Debug\netcoreapp2.1\Razor\Views\Cart\List.g.cshtml.cs
 C:\Users\Phuc-pc\source\repos\CaseStudy\CaseStudy\obj\Debug\netcoreapp2.1\Razor\Views\Branch\Index.g.cshtml.cs
+C:\Users\Phuc-pc\source\repos\CaseStudy\CaseStudy\obj\Debug\netcoreapp2.1\CaseStudy.csprojAssemblyReference.cache

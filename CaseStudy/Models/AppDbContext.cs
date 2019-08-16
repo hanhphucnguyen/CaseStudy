@@ -9,5 +9,6 @@ namespace CaseStudy.Models
         public virtual DbSet<Brand> Brands { get; set; }
         public virtual DbSet<Order> Orders { get; set; }
         public virtual DbSet<OrderLineItem> OrderLineItems { get; set; }
+        public virtual DbSet<Branch> Branches { get; set; }
     }
 }

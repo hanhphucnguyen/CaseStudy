@@ -98,7 +98,7 @@ using Microsoft.AspNetCore.Http;
             WriteLiteral("<div class=\"flex-container\">\r\n    <div class=\"w-100\">\r\n        <div class=\"text-center\">\r\n            ");
             EndContext();
             BeginContext(166, 77, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "667cd42dec6d4e72af5a7b10f6f3aa34", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "efd53c17d0f648d88751dd6621fddaa1", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -118,17 +118,17 @@ using Microsoft.AspNetCore.Http;
             WriteLiteral("\r\n            <h4 class=\"text-primary text-center mt-5\">Brands</h4>\r\n            ");
             EndContext();
             BeginContext(324, 361, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "b34d6fdaf36346cca5ac15ba4138f248", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "ec0d31a15afa4c86ae66cf62024cc8b9", async() => {
                 BeginContext(392, 18, true);
                 WriteLiteral("\r\n                ");
                 EndContext();
                 BeginContext(410, 254, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("select", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "d33c31d4d8384fe2b1270681ded0bdfc", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("select", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "bcfe373a8df94d479caf85df62f2ec15", async() => {
                     BeginContext(555, 22, true);
                     WriteLiteral("\r\n                    ");
                     EndContext();
                     BeginContext(577, 60, false);
-                    __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "ae56535c8bd542dca3ab4c389f2fe46a", async() => {
+                    __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "c128423ae0964a64acbb1d1406779194", async() => {
                         BeginContext(616, 12, true);
                         WriteLiteral("Select Brand");
                         EndContext();
@@ -204,7 +204,7 @@ __Microsoft_AspNetCore_Mvc_TagHelpers_SelectTagHelper.Items = Model.GetBrands();
             WriteLiteral("\r\n            ");
             EndContext();
             BeginContext(699, 46, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("catalogue", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "5321be2c5325456eb3d6f35fc768ea08", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("catalogue", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "f05ea1b59034443fb1fada22c71e62ba", async() => {
             }
             );
             __CaseStudy_TagHelpers_BrandHelper = CreateTagHelper<global::CaseStudy.TagHelpers.BrandHelper>();
@@ -243,7 +243,7 @@ __Microsoft_AspNetCore_Mvc_TagHelpers_SelectTagHelper.Items = Model.GetBrands();
                 ");
             EndContext();
             BeginContext(1292, 1336, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "5028468f5be54ae293bba60e3db97cce", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "e26a45a983a34ee7898fb2581fba996e", async() => {
                 BeginContext(1371, 491, true);
                 WriteLiteral(@"
                     <div class=""text-center"">
@@ -257,7 +257,7 @@ __Microsoft_AspNetCore_Mvc_TagHelpers_SelectTagHelper.Items = Model.GetBrands();
                                 ");
                 EndContext();
                 BeginContext(1862, 130, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("input", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "a46a694a7376462698ac0e2bcba71998", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("input", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "a79e8d1231c246d48d3bab9e059458fb", async() => {
                 }
                 );
                 __Microsoft_AspNetCore_Mvc_TagHelpers_InputTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.TagHelpers.InputTagHelper>();
@@ -286,7 +286,7 @@ __Microsoft_AspNetCore_Mvc_TagHelpers_InputTagHelper.For = ModelExpressionProvid
                 WriteLiteral("\r\n                                ");
                 EndContext();
                 BeginContext(2026, 52, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("input", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "afd2a2f2543b48ec874a5073bbb21f8e", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("input", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "be544c8759a446e898dde82389d4fe1d", async() => {
                 }
                 );
                 __Microsoft_AspNetCore_Mvc_TagHelpers_InputTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.TagHelpers.InputTagHelper>();

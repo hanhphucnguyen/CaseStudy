@@ -77,7 +77,7 @@ using Microsoft.AspNetCore.Http;
             WriteLiteral("<div class=\"m-4 text-center\">\r\n    ");
             EndContext();
             BeginContext(80, 77, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "65a61f76b69242d2b4f71e5fe6653915", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "65f116115ea44c4b8893a0f0629bb170", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();

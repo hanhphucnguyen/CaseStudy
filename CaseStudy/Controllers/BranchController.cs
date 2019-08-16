@@ -19,11 +19,11 @@ namespace CaseStudy.Controllers
             }
             return View();
         }
-        //[Route("[action]/{lat:double}/{lng:double}")]
-        //public IActionResult GetStores(float lat, float lng)
-        //{
-        //    BranchModel model = new BranchModel(_db);
-        //    return Ok(model.GetThreeClosestStores(lat, lng));
-        //}
+        [Route("[action]/{lat:double}/{lng:double}")]
+        public IActionResult GetStores(float lat, float lng)
+        {
+            BranchModel model = new BranchModel(_db);
+            return Ok(model.GetThreeClosestStores(lat, lng));
+        }
     }
 }

@@ -14,6 +14,8 @@ using CaseStudy.Models;
 using Microsoft.Extensions.DependencyInjection.Extensions;
 using Microsoft.AspNetCore.ResponseCompression;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc.Authorization;
 
 namespace CaseStudy
 {
@@ -58,7 +60,7 @@ namespace CaseStudy
 
             services.AddDbContext<AppDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
             // Add Identity and options
-            services.AddDefaultIdentity<ApplicationUser>().AddEntityFrameworkStores<AppDbContext>();
+            services.AddIdentity<ApplicationUser, IdentityRole>(options => options.Stores.MaxLengthForKeys = 128).AddEntityFrameworkStores<AppDbContext>().AddDefaultTokenProviders();
             services.Configure<IdentityOptions>(options =>
             {
                 // Password settings
@@ -74,6 +76,19 @@ namespace CaseStudy
                 options.Lockout.AllowedForNewUsers = true;
                 // User settings
                 options.User.RequireUniqueEmail = true;
+            });
+            // if they haven't logged on yet send them to login page
+            services.ConfigureApplicationCookie(options =>
+            {
+                options.LoginPath = "/Login";
+            });
+            // lock entire app down, adjust with [AllowAnoymous]
+            services.AddMvc(config =>
+            {
+                var policy = new AuthorizationPolicyBuilder()
+                .RequireAuthenticatedUser()
+                .Build();
+                config.Filters.Add(new AuthorizeFilter(policy));
             });
         }
 

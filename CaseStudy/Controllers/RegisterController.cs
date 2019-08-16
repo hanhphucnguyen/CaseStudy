@@ -23,6 +23,7 @@ namespace CaseStudy.Controllers
             return View();
         }
         // POST:/Register/Register
+        [AllowAnonymous]
         [HttpPost]
         public async Task<IActionResult> Register(RegisterViewModel model)
         {
